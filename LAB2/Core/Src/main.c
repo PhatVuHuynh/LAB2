@@ -92,17 +92,6 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim2);
   /* USER CODE END 2 */
 
-  /* USER CODE BEGIN 4 */
-  int counter = 100;
-  void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-	  --counter;
-	  if(counter <= 0){
-		  counter = 100;
-		  HAL_GPIO_TogglePin(RED_LED_GPIO_Port, RED_LED_Pin);
-	  }
-  }
-  /* USER CODE END 4 */
-
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
@@ -222,8 +211,15 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
-/* USER CODE END 4 */
+  int counter = 100;
+  void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+	  --counter;
+	  if(counter <= 0){
+		  counter = 100;
+		  HAL_GPIO_TogglePin(RED_LED_GPIO_Port, RED_LED_Pin);
+	  }
+  }
+  /* USER CODE END 4 */
 
 /**
   * @brief  This function is executed in case of error occurrence.
