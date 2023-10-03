@@ -457,11 +457,11 @@ int main(void)
  80003e0:	f44f 7100 	mov.w	r1, #512	; 0x200
  80003e4:	4828      	ldr	r0, [pc, #160]	; (8000488 <main+0xf0>)
  80003e6:	f000 fd2f 	bl	8000e48 <HAL_GPIO_WritePin>
-  setTimer(50, SEG);
+  setTimer(25, SEG);
  80003ea:	4b28      	ldr	r3, [pc, #160]	; (800048c <main+0xf4>)
  80003ec:	681b      	ldr	r3, [r3, #0]
  80003ee:	4619      	mov	r1, r3
- 80003f0:	2032      	movs	r0, #50	; 0x32
+ 80003f0:	2019      	movs	r0, #25
  80003f2:	f000 f94b 	bl	800068c <setTimer>
   setTimer(100, LED);
  80003f6:	4b26      	ldr	r3, [pc, #152]	; (8000490 <main+0xf8>)
@@ -544,11 +544,11 @@ int main(void)
 
 
 //		  setTimer(50, id);
-		  setTimer(50, SEG);
+		  setTimer(25, SEG);
  8000476:	4b05      	ldr	r3, [pc, #20]	; (800048c <main+0xf4>)
  8000478:	681b      	ldr	r3, [r3, #0]
  800047a:	4619      	mov	r1, r3
- 800047c:	2032      	movs	r0, #50	; 0x32
+ 800047c:	2019      	movs	r0, #25
  800047e:	f000 f905 	bl	800068c <setTimer>
 	  if(timer_flag[LED] == 1){
  8000482:	e7c0      	b.n	8000406 <main+0x6e>

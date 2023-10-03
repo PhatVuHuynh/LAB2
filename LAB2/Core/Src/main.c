@@ -188,7 +188,7 @@ int main(void)
   HAL_GPIO_WritePin(en1_GPIO_Port, en1_Pin, GPIO_PIN_SET);
   HAL_GPIO_WritePin(en0_GPIO_Port, en2_Pin, GPIO_PIN_SET);
   HAL_GPIO_WritePin(en1_GPIO_Port, en3_Pin, GPIO_PIN_SET);
-  setTimer(50, SEG);
+  setTimer(25, SEG);
   setTimer(100, LED);
 
 //  int seg = 0;
@@ -215,7 +215,7 @@ int main(void)
 
 
 //		  setTimer(50, id);
-		  setTimer(50, SEG);
+		  setTimer(25, SEG);
 	  }
 
     /* USER CODE END WHILE */
