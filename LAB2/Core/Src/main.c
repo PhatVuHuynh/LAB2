@@ -279,8 +279,8 @@ int main(void)
   HAL_GPIO_WritePin(dot_GPIO_Port, dot_Pin, GPIO_PIN_RESET);
   HAL_GPIO_WritePin(en0_GPIO_Port, en0_Pin, GPIO_PIN_RESET);
   HAL_GPIO_WritePin(en1_GPIO_Port, en1_Pin, GPIO_PIN_RESET);
-  HAL_GPIO_WritePin(en0_GPIO_Port, en2_Pin, GPIO_PIN_RESET);
-  HAL_GPIO_WritePin(en1_GPIO_Port, en3_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(en2_GPIO_Port, en2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(en3_GPIO_Port, en3_Pin, GPIO_PIN_RESET);
   setTimer(100, SEG);
   setTimer(100, LED);
 
