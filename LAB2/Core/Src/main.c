@@ -95,13 +95,13 @@ void updateLEDMatrix(int id){
 			HAL_GPIO_WritePin(row1_GPIO_Port, row1_Pin, GPIO_PIN_SET);
 			HAL_GPIO_WritePin(enm2_GPIO_Port, enm2_Pin, GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(row2_GPIO_Port, row2_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(enm3_GPIO_Port, enm3_Pin, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(enm3_GPIO_Port, enm3_Pin, GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(row3_GPIO_Port, row3_Pin, GPIO_PIN_SET);
 			HAL_GPIO_WritePin(enm4_GPIO_Port, enm4_Pin, GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(row4_GPIO_Port, row4_Pin, GPIO_PIN_SET);
 			HAL_GPIO_WritePin(enm5_GPIO_Port, enm5_Pin, GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(row5_GPIO_Port, row5_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(enm6_GPIO_Port, enm6_Pin, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(enm6_GPIO_Port, enm6_Pin, GPIO_PIN_SET);
 			HAL_GPIO_WritePin(row6_GPIO_Port, row6_Pin, GPIO_PIN_SET);
 			HAL_GPIO_WritePin(enm7_GPIO_Port, enm7_Pin, GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(row7_GPIO_Port, row7_Pin, GPIO_PIN_SET);
@@ -277,10 +277,10 @@ int main(void)
 
 //  setTimer(50, id);
   HAL_GPIO_WritePin(dot_GPIO_Port, dot_Pin, GPIO_PIN_RESET);
-  HAL_GPIO_WritePin(en0_GPIO_Port, en0_Pin, GPIO_PIN_RESET);
-  HAL_GPIO_WritePin(en1_GPIO_Port, en1_Pin, GPIO_PIN_RESET);
-  HAL_GPIO_WritePin(en2_GPIO_Port, en2_Pin, GPIO_PIN_RESET);
-  HAL_GPIO_WritePin(en3_GPIO_Port, en3_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(en0_GPIO_Port, en0_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(en1_GPIO_Port, en1_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(en2_GPIO_Port, en2_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(en3_GPIO_Port, en3_Pin, GPIO_PIN_SET);
   setTimer(100, SEG);
   setTimer(100, LED);
 
