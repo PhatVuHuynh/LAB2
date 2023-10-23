@@ -141,3 +141,13 @@ void updateLEDMatrix(uint8_t *buffer, int index){
 
 	OnColunm(buffer[index]);
 }
+
+void shiftLeft(uint8_t *buffer){
+	for(int i = 0; i < 8; ++i){
+		uint8_t check = 0x80 & buffer[i];
+		buffer[i] <<= 1;
+		if(check == 0x80){
+			buffer[i] |= 1;
+		}
+	}
+}

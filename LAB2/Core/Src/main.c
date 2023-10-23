@@ -19,6 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "led.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -221,6 +222,8 @@ int main(void)
 		  		  led = 1;
 		  	  }
 		  }
+
+		  shiftLeft(matrix_buffer);
 		  setTimer(100, LED);
 	  }
 
