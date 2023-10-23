@@ -7,8 +7,8 @@
 
 #include "software_timer.h"
 
-int timer_counter[2] = {0, 0};//, 0, 0, 0, 0, 0, 0, 0, 0};
-int timer_flag[2] = {0, 0};//, 0, 0, 0, 0, 0, 0, 0, 0};
+int timer_counter[3] = {0, 0, 0};//, 0, 0, 0, 0, 0, 0, 0, 0};
+int timer_flag[3] = {0, 0, 0};//, 0, 0, 0, 0, 0, 0, 0, 0};
 
 void setTimer(int duration, int id){
 	timer_counter[id] = duration;
